@@ -1,0 +1,40 @@
+{
+	"Sequence Diagram": {
+		"prefix": "puml:sequence",
+		"body": [
+			"@startuml",
+			"participant \"${1:Participant 1}\" as P1",
+			"participant \"${2:Participant 2}\" as P2",
+			"",
+			"P1 -> P2: ${3:Message}",
+			"P2 --> P1: ${4:Response}",
+			"@enduml"
+		],
+		"description": "Basic sequence diagram"
+	},
+	"Class Diagram": {
+		"prefix": "puml:class",
+		"body": [
+			"@startuml",
+			"class ${1:ClassName} {",
+			"  +${2:method}()",
+			"  -${3:field}",
+			"}",
+			"",
+			"${4:OtherClass} <|-- $1",
+			"@enduml"
+		],
+		"description": "Basic class diagram"
+	},
+    "Mindmap": {
+		"prefix": "puml:mindmap",
+		"body": [
+			"@startmindmap",
+			"* ${1:Root}",
+			"** ${2:Node 1}",
+			"** ${3:Node 2}",
+			"@endmindmap"
+		],
+		"description": "Basic mindmap"
+	}
+}

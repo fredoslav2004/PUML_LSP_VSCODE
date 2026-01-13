@@ -1,0 +1,56 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PlantUML",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.puml",
+				"match": "\\b(if|then|else|endif|while|endwhile|fork|endfork|repeat|until|loop|alt|else|group|opt|break|ref|return|stop|start|end)\\b"
+			},
+			{
+				"name": "keyword.other.puml",
+				"match": "^\\s*(@startuml|@enduml|@startmindmap|@endmindmap|@startgantt|@endgantt|@startwbs|@endwbs)\\b"
+			},
+			{
+				"name": "storage.type.puml",
+				"match": "\\b(actor|boundary|control|entity|database|collections|participant|queue|class|interface|enum|abstract|annotation|state|object)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.puml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.puml",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.apostrophe.puml",
+					"match": "'.*$"
+				},
+				{
+					"name": "comment.block.puml",
+					"begin": "/'",
+					"end": "'/"
+				}
+			]
+		}
+	},
+	"scopeName": "source.puml"
+}

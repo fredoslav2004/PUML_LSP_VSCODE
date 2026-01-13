@@ -1,0 +1,19 @@
+@startuml
+title Sample Diagram
+
+actor User
+participant "LSP Server" as Server
+database "Database" as DB
+
+User -> Server: Write PUML code
+Server -> Server: Validate syntax
+alt successful validation
+    Server -> User: Show Diagnostics (None)
+    User -> Server: Request Preview
+    Server -> User: Render SVG
+else invalid syntax
+    Server -> User: Show Error Diagnostics
+end
+
+User -> DB: Save file
+@enduml

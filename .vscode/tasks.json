@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "compile",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$tsc"
+			],
+			"label": "npm: compile",
+			"detail": "Compile both client and server"
+		},
+		{
+			"type": "npm",
+			"script": "watch",
+			"group": "build",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"label": "npm: watch",
+			"detail": "Watch and compile both client and server"
+		}
+	]
+}

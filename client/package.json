@@ -1,0 +1,17 @@
+{
+  "name": "plantuml-lsp-client",
+  "description": "PlantUML LSP Client",
+  "version": "0.0.1",
+  "publisher": "vscode-samples",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "dependencies": {
+    "plantuml-encoder": "^1.4.0",
+    "vscode-languageclient": "^8.0.2"
+  },
+  "devDependencies": {
+    "@types/plantuml-encoder": "^1.4.2",
+    "@types/vscode": "^1.75.0"
+  }
+}
